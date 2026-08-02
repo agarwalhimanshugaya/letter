@@ -14,13 +14,13 @@ export default function Letter() {
         <span>Your Favorite Photo</span>
       </div>
 
-      <h1>💌 To My Dearest Khusi</h1>
+      <h1>💌 To My Dearest Khusi(Madam Ji)</h1>
 
       <TypeAnimation
   sequence={[
-`My Dearest Khusi ❤️,
+`My Dearest Khusi  ❤️,
 
-You are my favorite hello,
+You are my favorite Person,
 my safest place,
 and the most beautiful part of my life.
 
