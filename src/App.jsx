@@ -5,11 +5,13 @@ import ScannerPage from "./components/scanner/ScannerPage";
 import EnvelopePage from "./components/envelope/EnvelopePage";
 import LetterPage from "./components/letter/LetterPage";
 import EndingPage from "./components/ending/EndingPage";
+import BackgroundMusic from "./components/common/BackgroundMusic";
 function App() {
   const [page, setPage] = useState(1);
 
   return (
     <>
+      <BackgroundMusic />
       {page === 1 && (
         <Hero onNext={() => setPage(2)} />
       )}
