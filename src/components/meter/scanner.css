@@ -1,0 +1,196 @@
+.scanner {
+  position: relative;
+
+  width: 360px;
+  height: 360px;
+
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: visible;
+}
+
+.progressSvg{
+
+position:absolute;
+
+}
+
+.outerRing{
+
+position:absolute;
+
+width:280px;
+
+height:280px;
+
+border:2px dashed rgba(255,255,255,.15);
+
+border-radius:50%;
+
+}
+
+.middleRing{
+
+position:absolute;
+
+width:235px;
+
+height:235px;
+
+border:2px solid rgba(255,255,255,.12);
+
+border-radius:50%;
+
+}
+
+.scannerCenter{
+
+position:absolute;
+
+width:150px;
+
+height:150px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(15px);
+
+border-radius:50%;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:0 0 40px rgba(255,77,166,.25);
+
+}
+
+.heartIcon{
+
+font-size:40px;
+
+margin-bottom:10px;
+
+}
+
+.scannerCenter h2{
+
+font-size:36px;
+
+font-weight:700;
+
+}
+/* Scanner Sweep */
+
+.scannerSweep{
+
+position:absolute;
+
+width:4px;
+
+height:140px;
+
+background:
+
+linear-gradient(
+to top,
+transparent,
+#ff4da6,
+white
+);
+
+transform-origin:
+bottom center;
+
+border-radius:999px;
+
+filter:drop-shadow(0 0 18px #ff4da6);
+
+z-index:3;
+
+}
+
+/* Scanner Glow */
+
+.scannerComplete{
+
+animation:scannerGlow .8s infinite;
+
+}
+
+@keyframes scannerGlow{
+
+0%{
+
+box-shadow:
+0 0 25px #ff4da6;
+
+}
+
+50%{
+
+box-shadow:
+0 0 55px #ff4da6,
+0 0 90px #9333ea;
+
+}
+
+100%{
+
+box-shadow:
+0 0 25px #ff4da6;
+
+}
+
+}
+
+/* Faster Heart Pulse */
+
+.heartIcon{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:42px;
+
+}
+/* Floating Particles */
+
+.particle{
+
+position:absolute;
+
+width:10px;
+height:10px;
+
+border-radius:50%;
+
+background:#ff69b4;
+
+box-shadow:
+0 0 10px #ff69b4,
+0 0 20px #ff69b4,
+0 0 35px #ff69b4;
+
+left:50%;
+top:50%;
+
+margin-left:-5px;
+margin-top:-5px;
+
+z-index:100;
+
+}

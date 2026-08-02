@@ -1,0 +1,537 @@
+.endingPage{
+
+position:relative;
+
+width:100%;
+height:100vh;
+
+overflow:hidden;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:
+radial-gradient(circle at top,
+#24103f,
+#12061d,
+#06020c);
+
+}
+
+.star{
+
+position:absolute;
+
+width:3px;
+height:3px;
+
+border-radius:50%;
+
+background:white;
+
+box-shadow:
+0 0 8px white;
+
+}
+
+.floatingHeart{
+
+position:absolute;
+
+font-size:26px;
+
+pointer-events:none;
+
+user-select:none;
+
+filter:
+drop-shadow(0 0 10px #ff4da6);
+
+}
+
+.explosionHeart{
+
+position:absolute;
+
+left:50%;
+top:50%;
+
+font-size:28px;
+
+margin-left:-14px;
+margin-top:-14px;
+
+pointer-events:none;
+
+z-index:50;
+
+}
+/* ========================= */
+/* Intro Text */
+/* ========================= */
+
+.endingText{
+
+position:absolute;
+
+font-size:54px;
+
+font-weight:700;
+
+color:white;
+
+text-align:center;
+
+text-shadow:
+0 0 20px rgba(255,255,255,.35);
+
+z-index:20;
+
+}
+
+/* ========================= */
+/* Proposal Card */
+/* ========================= */
+
+.proposalBox{
+
+width:min(720px,90%);
+
+padding:60px;
+
+text-align:center;
+
+border-radius:35px;
+
+background:rgba(255,255,255,.07);
+
+backdrop-filter:blur(25px);
+
+-webkit-backdrop-filter:blur(25px);
+
+border:
+
+1px solid rgba(255,255,255,.15);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:
+0 0 70px rgba(255,77,166,.25);
+
+z-index:20;
+
+animation:cardFloat 5s ease-in-out infinite;
+
+}
+
+.proposalBox h1{
+
+font-size:90px;
+
+margin-bottom:20px;
+
+animation:heartBeat 1.2s infinite;
+
+}
+
+.proposalBox h2{
+
+font-size:46px;
+
+color:white;
+
+line-height:1.4;
+
+}
+
+.proposalBox h3{
+
+margin-top:12px;
+
+font-size:34px;
+
+color:#ffd7ea;
+
+}
+
+.proposalBox p{
+
+margin-top:25px;
+
+font-size:24px;
+
+line-height:1.8;
+
+color:#fff4fb;
+
+}
+
+/* ========================= */
+/* Button */
+/* ========================= */
+
+.yesBtn{
+
+margin-top:45px;
+
+padding:20px 60px;
+
+font-size:24px;
+
+font-weight:bold;
+
+color:white;
+
+cursor:pointer;
+
+border:none;
+
+border-radius:999px;
+
+background:
+linear-gradient(
+135deg,
+#ff4da6,
+#9333ea
+);
+
+box-shadow:
+0 0 30px rgba(255,77,166,.6);
+
+transition:.35s;
+
+animation:buttonGlow 2s infinite;
+
+}
+
+.yesBtn:hover{
+
+transform:translateY(-4px) scale(1.08);
+
+}
+
+/* ========================= */
+/* Final Message */
+/* ========================= */
+
+.finalMessage{
+
+position:absolute;
+
+text-align:center;
+
+color:white;
+
+z-index:40;
+
+animation:fadeIn 1.2s ease;
+
+}
+
+.finalMessage h1{
+
+font-size:90px;
+
+margin-bottom:25px;
+
+animation:heartBeat 1.2s infinite;
+
+}
+
+.finalMessage h2{
+
+font-size:56px;
+
+margin-bottom:20px;
+
+}
+
+.finalMessage h3{
+
+font-size:34px;
+
+line-height:1.8;
+
+margin-bottom:30px;
+
+color:#ffe2f2;
+
+}
+
+.finalMessage p{
+
+font-size:28px;
+
+line-height:1.8;
+
+margin-bottom:30px;
+
+color:#fff6fb;
+
+}
+
+.finalMessage span{
+
+font-size:32px;
+
+font-weight:bold;
+
+color:#ff8fc7;
+
+}
+
+.forever{
+
+margin-top:45px;
+
+font-size:18px;
+
+letter-spacing:6px;
+
+text-transform:uppercase;
+
+opacity:.8;
+
+color:#ffd6ea;
+
+}
+
+/* ========================= */
+/* Animations */
+/* ========================= */
+
+@keyframes heartBeat{
+
+0%{
+transform:scale(1);
+}
+
+25%{
+transform:scale(1.12);
+}
+
+50%{
+transform:scale(1);
+}
+
+75%{
+transform:scale(1.08);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+@keyframes buttonGlow{
+
+0%{
+box-shadow:
+0 0 20px #ff4da6;
+}
+
+50%{
+box-shadow:
+0 0 45px #ff4da6,
+0 0 80px #9333ea;
+}
+
+100%{
+box-shadow:
+0 0 20px #ff4da6;
+}
+
+}
+
+@keyframes cardFloat{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+.petal{
+
+position:absolute;
+
+font-size:28px;
+
+pointer-events:none;
+
+z-index:3;
+
+filter:
+drop-shadow(0 0 6px rgba(255,192,203,.6));
+
+}
+.loveSky{
+
+animation:loveSky 3s forwards;
+
+}
+
+@keyframes loveSky{
+
+0%{
+
+background:
+radial-gradient(circle,#24103f,#12061d,#06020c);
+
+}
+
+100%{
+
+background:
+radial-gradient(circle,#ff4da6,#7b2cbf,#14051d);
+
+}
+
+}
+.heartMerge{
+
+position:absolute;
+
+top:28%;
+
+left:50%;
+
+transform:translateX(-50%);
+
+display:flex;
+
+gap:10px;
+
+z-index:40;
+
+}
+
+.mergeHeart{
+
+font-size:60px;
+
+animation:pulse 1s infinite;
+
+}
+
+@keyframes pulse{
+
+50%{
+
+transform:scale(1.2);
+
+}
+
+}
+.yesBtn{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.yesBtn::before{
+
+content:"";
+
+position:absolute;
+
+left:-150%;
+
+top:0;
+
+width:60%;
+
+height:100%;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.7),
+
+transparent
+
+);
+
+transform:skewX(-20deg);
+
+animation:shine 3s infinite;
+
+}
+
+@keyframes shine{
+
+100%{
+
+left:180%;
+
+}
+
+}
+.star{
+
+transition:1.5s;
+
+}
+
+.loveSky .star{
+
+box-shadow:
+
+0 0 15px white,
+
+0 0 35px #ffd1ec;
+
+}
+.signature{
+
+margin-top:40px;
+
+font-size:18px;
+
+opacity:.75;
+
+letter-spacing:2px;
+
+font-style:italic;
+
+color:#ffdbe8;
+
+}

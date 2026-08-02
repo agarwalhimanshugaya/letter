@@ -1,0 +1,160 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    135deg,
+    #14091d,
+    #24113b,
+    #1a0c2d
+  );
+}
+
+.backgroundGlow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: .35;
+}
+
+.glow1 {
+  background: #ff4da6;
+  top: -150px;
+  left: -150px;
+}
+
+.glow2 {
+  background: #7c3aed;
+  bottom: -150px;
+  right: -150px;
+}
+
+.heroCard {
+  width: min(90%, 700px);
+
+  padding: 60px 40px;
+
+  text-align: center;
+
+  border-radius: 30px;
+
+  background: rgba(255,255,255,.08);
+
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255,255,255,.15);
+
+  box-shadow: 0 20px 60px rgba(0,0,0,.35);
+
+  z-index: 2;
+}
+
+.heroTitle {
+  font-size: clamp(48px, 8vw, 82px);
+
+  margin-bottom: 20px;
+
+  background: linear-gradient(
+    90deg,
+    #ff5ea8,
+    #ffd2e8,
+    #a855f7
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroSubtitle {
+  font-size: 22px;
+
+  line-height: 1.8;
+
+  color: rgba(255,255,255,.85);
+
+  margin-bottom: 40px;
+}
+
+.primary-button {
+  padding: 18px 42px;
+
+  border: none;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    135deg,
+    #ff4da6,
+    #9333ea
+  );
+
+  color: white;
+
+  font-size: 18px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  box-shadow: 0 15px 35px rgba(255, 77, 166, .35);
+
+  transition: .3s;
+}
+
+.primary-button:hover {
+  box-shadow: 0 15px 40px rgba(255,77,166,.4);
+}
+/* ========================= */
+/* Aurora Background */
+/* ========================= */
+
+.aurora {
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  filter: blur(130px);
+  opacity: .28;
+}
+
+.aurora1 {
+  background: #ff4da6;
+  top: -180px;
+  left: -180px;
+}
+
+.aurora2 {
+  background: #7c3aed;
+  bottom: -220px;
+  right: -150px;
+}
+
+.aurora3 {
+  background: #38bdf8;
+  top: 45%;
+  left: 40%;
+}
+/* ========================= */
+/* Floating Hearts */
+/* ========================= */
+
+.floatingHeart {
+  position: absolute;
+  bottom: -120px;
+  z-index: 1;
+
+  user-select: none;
+  pointer-events: none;
+
+  filter: drop-shadow(0 0 10px rgba(255, 77, 166, 0.8));
+
+  opacity: 0;
+}

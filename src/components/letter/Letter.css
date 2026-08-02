@@ -1,0 +1,161 @@
+.letterPage{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    padding:60px 20px 100px;
+
+    overflow-y:auto;
+
+    background:linear-gradient(
+        135deg,
+        #12061d,
+        #24123b,
+        #0d0616
+    );
+}
+
+.letterCard{
+    width:min(90%,700px);
+
+    margin:40px auto;
+
+    padding:40px;
+
+    border-radius:30px;
+
+    background:white;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.3);
+}
+
+.letterCard h1{
+
+  text-align:center;
+
+  color:#ff4da6;
+
+  margin-bottom:35px;
+
+  font-size:42px;
+
+}
+
+.letterContent{
+
+  font-size:22px;
+
+  line-height:2;
+
+}
+
+.letterContent p{
+
+  margin-bottom:22px;
+
+}
+
+.signature{
+
+  margin-top:50px;
+
+  text-align:right;
+
+  font-weight:bold;
+
+  color:#ff4da6;
+
+}
+
+.continueBtn{
+
+  margin-top:40px;
+
+  padding:18px 45px;
+
+  border:none;
+
+  border-radius:999px;
+
+  background:linear-gradient(
+  90deg,
+  #ff4da6,
+  #9333ea
+  );
+
+  color:white;
+
+  font-size:20px;
+
+  cursor:pointer;
+
+  box-shadow:
+  0 15px 40px rgba(255,77,166,.4);
+
+  transition:.3s;
+
+}
+
+.continueBtn:hover{
+
+  transform:translateY(-4px);
+
+}
+.photoFrame{
+
+width:170px;
+height:170px;
+
+margin:auto;
+
+border-radius:20px;
+
+background:linear-gradient(
+135deg,
+#ffe4ef,
+#fff
+);
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+font-size:60px;
+
+margin-bottom:35px;
+
+box-shadow:
+0 15px 35px rgba(255,77,166,.25);
+
+}
+
+.photoFrame span{
+
+font-size:14px;
+
+margin-top:10px;
+
+color:#777;
+
+}
+
+.typedLetter{
+
+white-space:pre-line;
+
+font-size:21px;
+
+line-height:2;
+
+margin-top:20px;
+
+font-family:
+"Caveat",
+cursive;
+
+color:#555;
+
+}

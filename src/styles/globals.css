@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background: #0b0616;
+  color: white;
+  font-family: Inter, Arial, sans-serif;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+button {
+  cursor: pointer;
+  font: inherit;
+}

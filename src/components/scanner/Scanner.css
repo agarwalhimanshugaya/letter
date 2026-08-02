@@ -1,0 +1,397 @@
+.scannerPage{
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #0b0616,
+        #1b1033,
+        #13071f
+    );
+
+    overflow:hidden;
+}
+
+.scanner{
+
+    position:relative;
+
+    width:360px;
+    height:360px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.progressCircle{
+
+    position:absolute;
+
+    transform:rotate(-90deg);
+}
+
+.track{
+
+    fill:none;
+
+    stroke:rgba(255,255,255,.08);
+
+    stroke-width:12;
+}
+
+.progress{
+
+    fill:none;
+
+    stroke:#ff4da6;
+
+    stroke-width:12;
+
+    stroke-linecap:round;
+
+    transition:stroke-dashoffset .3s;
+
+    filter:drop-shadow(0 0 12px #ff4da6);
+}
+
+.outerRing{
+
+    position:absolute;
+
+    width:300px;
+    height:300px;
+
+    border-radius:50%;
+
+    border:2px dashed rgba(255,255,255,.18);
+}
+
+.innerRing{
+
+    position:absolute;
+
+    width:240px;
+    height:240px;
+
+    border-radius:50%;
+
+    border:2px solid rgba(255,255,255,.12);
+}
+
+.scannerBeam{
+
+position:absolute;
+
+width:5px;
+height:165px;
+
+background:linear-gradient(
+to top,
+transparent,
+#ff4da6,
+#ffffff
+);
+
+transform-origin:bottom center;
+
+border-radius:999px;
+
+filter:
+drop-shadow(0 0 20px #ff4da6);
+
+z-index:4;
+
+}
+
+.scannerCenter{
+
+position:absolute;
+
+width:150px;
+height:150px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:
+0 0 30px rgba(255,77,166,.35);
+
+animation:centerGlow 2s infinite;
+
+z-index:5;
+
+}
+@keyframes centerGlow{
+
+0%{
+
+box-shadow:
+0 0 20px rgba(255,77,166,.25);
+
+}
+
+50%{
+
+box-shadow:
+0 0 50px rgba(255,77,166,.65),
+0 0 90px rgba(147,51,234,.45);
+
+}
+
+100%{
+
+box-shadow:
+0 0 20px rgba(255,77,166,.25);
+
+}
+
+}
+.heart{
+
+    font-size:42px;
+
+    margin-bottom:10px;
+}
+
+.scannerCenter h2{
+
+    color:white;
+
+    font-size:34px;
+}
+
+.scanTitle{
+
+    margin-top:40px;
+
+    color:white;
+
+    font-size:34px;
+}
+
+.scanMessage{
+
+    margin-top:18px;
+
+    color:#ffd6ea;
+
+    font-size:20px;
+}
+/* Orbit Hearts */
+
+.orbitContainer{
+
+position:absolute;
+
+width:100%;
+height:100%;
+}
+
+.orbitHeart{
+
+position:absolute;
+
+left:50%;
+top:50%;
+
+margin-left:-12px;
+margin-top:-12px;
+
+font-size:24px;
+
+filter:drop-shadow(0 0 10px #ff4da6);
+}
+/* ========================= */
+/* Floating Energy Particles */
+/* ========================= */
+
+.particle{
+
+position:absolute;
+
+width:8px;
+height:8px;
+
+border-radius:50%;
+
+background:#ff4da6;
+
+box-shadow:
+0 0 8px #ff4da6,
+0 0 18px #ff4da6,
+0 0 28px #ff4da6;
+
+margin-left:-4px;
+margin-top:-4px;
+
+pointer-events:none;
+
+z-index:0;
+
+}
+/* ========================= */
+/* Complete Card */
+/* ========================= */
+
+.completeCard{
+
+margin-top:35px;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+
+animation:fadeUp .8s ease;
+
+}
+
+.completeCard h2{
+
+font-size:34px;
+
+color:white;
+
+margin-bottom:10px;
+
+}
+
+.completeCard p{
+
+color:#ffd5eb;
+
+font-size:20px;
+
+margin-bottom:15px;
+
+}
+
+.completeCard h1{
+
+font-size:72px;
+
+background:linear-gradient(
+90deg,
+#ff4da6,
+#ffffff,
+#9333ea
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+margin-bottom:10px;
+
+}
+
+.completeCard span{
+
+font-size:20px;
+
+color:#ffc9e5;
+
+margin-bottom:30px;
+
+}
+
+.openLetterButton{
+
+padding:18px 45px;
+
+border:none;
+
+border-radius:999px;
+
+background:linear-gradient(
+135deg,
+#ff4da6,
+#9333ea
+);
+
+color:white;
+
+font-size:20px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.3s;
+
+box-shadow:
+0 15px 40px rgba(255,77,166,.4);
+
+}
+
+.openLetterButton:hover{
+
+transform:translateY(-3px) scale(1.04);
+
+box-shadow:
+0 25px 60px rgba(255,77,166,.6);
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+.scannerComplete{
+
+animation:
+centerGlow .8s infinite,
+scannerCelebrate 1.2s infinite;
+
+}
+
+@keyframes scannerCelebrate{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
