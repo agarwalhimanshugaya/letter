@@ -1,18 +1,20 @@
-import { useEffect, useRef, useState } from "react";
+// BackgroundMusic.jsx
 
-export default function BackgroundMusic() {
+import { useEffect, useRef, useImperativeHandle, forwardRef, useState } from "react";
+
+const BackgroundMusic = forwardRef((props, ref) => {
   const audioRef = useRef(null);
-  const [playing, setPlaying] = useState(true);
+  const [playing, setPlaying] = useState(false);
 
-  useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.volume = 0.25;
-
-      audioRef.current.play().catch(() => {
-        // Browser may wait until first user interaction
-      });
+  useImperativeHandle(ref, () => ({
+    playMusic() {
+      if (audioRef.current) {
+        audioRef.current.volume = 0.2;
+        audioRef.current.play();
+        setPlaying(true);
+      }
     }
-  }, []);
+  }));
 
   const toggleMusic = () => {
     if (!audioRef.current) return;
@@ -28,18 +30,12 @@ export default function BackgroundMusic() {
 
   return (
     <>
-      <audio
-        ref={audioRef}
-        src="/music/love.mp3"
-        loop
-      />
-
-      <button
-        className="musicButton"
-        onClick={toggleMusic}
-      >
+      <audio ref={audioRef} src="/music/love.mp3" loop />
+      <button className="musicButton" onClick={toggleMusic}>
         {playing ? "🔊" : "🔇"}
       </button>
     </>
   );
-}
+});
+
+export default BackgroundMusic;
